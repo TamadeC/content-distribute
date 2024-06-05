@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.processing.mapper.PictrueMapper">
+
+    <resultMap id="BaseResultMap" type="com.processing.domain.Pictrue">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="picUrl" column="pic_url" jdbcType="VARCHAR"/>
+            <result property="platform" column="platform" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,pic_url,platform,
+        create_time
+    </sql>
+</mapper>

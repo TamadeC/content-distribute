@@ -1,2 +1,33 @@
 server:
   port: 10000
+
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://47.115.229.158:3306/money?useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+      username: root
+      password: chsvip..
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      max-active: 20
+      initial-size: 1
+      min-idle: 1
+      validation-query: select 1
+
+
+
+#ai模型
+#百度 ernie-speed-128k
+ai:
+  prompt: "改写下面文段。大意不变。"
+baidu:
+  appid: 78733120
+  api-key: 1N0eU89wpJHXI5sM5fGMCVqM
+  secret-key: s2hRIlRlbDsPd88Wym0HzZMclkuv8xxT
+  url: https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/ernie-speed-128k?access_token=
+  access-token-url: https://aip.baidubce.com/oauth/2.0/token
+#讯飞
+xunfei:
+  appid:
+  api-key:
+  secret-key:
+
